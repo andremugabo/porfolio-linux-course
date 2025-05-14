@@ -135,8 +135,8 @@ toggle.addEventListener("change", () => {
 
 **Mugabo Andre**
 Software Engineering @ AUCA
-GitHub: \[https://github.com/andremugabo]
-Email: \[andremugabo@yahoo.fr]
+GitHub: https://github.com/andremugabo
+Email: andremugabo@yahoo.fr
 
 ---
 
