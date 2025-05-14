@@ -10,21 +10,7 @@ This is a dynamic portfolio website hosted on **Nginx**, featuring:
 
 ---
 
-## 📁 Project Structure
 
-```
-
-portfolio/
-│
-├── index.html            # Frontend structure
-├── script.js             # Theme toggle + fetch dynamic data
-├── styles.css            # Light/Dark mode styles
-├── data.php              # PHP script to fetch data from MySQL
-├── assets/
-│   └── img/
-│       └── profile.jpg   # Profile image
-
-````
 
 ---
 
