@@ -1,0 +1,44 @@
+{
+    "name": "Mugabo Andre",
+    "title": "Full Stack Developer",
+    "about": "Passionate about building scalable web applications and elegant user interfaces. I specialize in modern JavaScript frameworks and have experience working with diverse teams to deliver high-quality software solutions.",
+    "location": "Kigali Rwanda",
+    "availability": "Open to new opportunities",
+    "contact": {
+      "email": "andre.mugabo@andremugabo.rw",
+      "phone": "(+250)78 316 5626"
+    },
+    "socials": {
+      "github": "https://github.com/andremugabo",
+      "linkedin": "https://www.linkedin.com/in/mugabo-andr%C3%A9-9a1a0774/",
+      "twitter": "https://twitter.com/andremugabo",
+      "dribbble": "https://dribbble.com/andremugabo"
+    },
+    "skills": {
+      "frontend": ["JavaScript", "TypeScript", "React", "Next.js", "Vue.js"],
+      "backend": ["Node.js", "Express", "GraphQL"],
+      "database": ["MongoDB", "PostgreSQL"],
+      "devops": ["Docker", "AWS", "CI/CD", "Git"]
+    },
+    "experience": [
+      {
+        "role": "Senior Frontend Developer",
+        "company": "MA. Coding Lab",
+        "duration": "2022–2024",
+        "details": "Led the frontend development team in building a scalable SaaS platform. Implemented modern React patterns and optimized performance, resulting in a 40% improvement in load times."
+      },
+      {
+        "role": "Full Stack Developer",
+        "company": "InnovateSoft",
+        "duration": "2020–2022",
+        "details": "Developed and maintained multiple client projects using the MERN stack. Collaborated with designers to implement responsive UIs and integrated RESTful APIs."
+      },
+      {
+        "role": "Junior Web Developer",
+        "company": "WebSolutions",
+        "duration": "2018–2020",
+        "details": "Assisted in the development of e-commerce websites. Worked with HTML, CSS, JavaScript, and PHP to implement features and fix bugs."
+      }
+    ]
+  }
+  

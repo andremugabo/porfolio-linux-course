@@ -1,0 +1,13 @@
+:root {
+    --primary: #3b82f6;
+    --background: #020817;
+    --foreground: #ffffff;
+    --card-bg: #1e292b;
+    --accent: #9333ea;
+}
+
+body {
+    margin: 0;
+    font-family: 'intel', sans-serif;
+    background-color: var(--background);
+}
