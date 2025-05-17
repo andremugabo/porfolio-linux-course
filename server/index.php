@@ -4,15 +4,20 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
 
-$host = 'localhost';
+$host = '127.0.0.1';
 $db   = 'portfolio_linux_db';
-$user = 'postgres';
-$pass = '123';
+$user = 'portfolio_user';
+$port = 3306;
+$pass = 'Mugabo@1983';
 $charset = 'utf8mb4';
 
-$dsn = "pgsql:host=$host;dbname=$db"; 
-//$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+//$dsn = "pgsql:host=$host;dbname=$db"; 
+$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
 
+$options = [
+	PDO::ATTR_ERRMODE               => PDO::ERRMODE_EXCEPTION,
+	PDO::ATTR_DEFAULT_FETCH_MODE    => PDO::FETCH_ASSOC
+];
 
 try {
     $pdo = new PDO($dsn, $user, $pass);
@@ -66,7 +71,7 @@ $stmt = $pdo->prepare("
     SELECT role, company, duration, details
     FROM experience
     WHERE user_id = ?
-    ORDER BY id ASC
+    ORDER BY user_id  ASC
 ");
 $stmt->execute([$userId]);
 $experience = $stmt->fetchAll(PDO::FETCH_ASSOC);

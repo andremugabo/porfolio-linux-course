@@ -17,16 +17,23 @@ toggle.addEventListener("change", () => {
   applyTheme(next);
 });
 
+const apiUrl = `${window.location.origin}/server/index.php`;
 
-fetch("http://localhost:8001/")
+fetch(apiUrl)
     .then((res) => {
         if(!res.ok){
-            throw new Error('Network response was not OK')
+            throw new Error(`HTTP error! Status: ${res.status}`);
         }
-        return res.json()
+	console.log(res);	
+        return res.json();
     })
     .then((data) =>{
-        console.log(data.status);
+	
+	if(!data || !data.name) {
+		throw new Error("Invalid data structure from API")
+	}        
+
+
         document.getElementById("name").textContent = data.name;
         document.getElementById("title").textContent = data.title;
         document.getElementById("about").textContent = data.about;
@@ -40,6 +47,7 @@ fetch("http://localhost:8001/")
         //Skills
         const skills = data.skills;
         const skillsContainer = document.getElementById("skills-container");
+	skillsContainer.innerHTML = "";
         for (let category in skills) {
             const group = document.createElement("div");
             group.innerHTML = `<strong>${category}:</strong> ${skills[category].join(", ")}`;
@@ -66,3 +74,11 @@ fetch("http://localhost:8001/")
         }
 
     })
+    .catch((error) =>{
+	console.error("Error loading profile data:",error);
+	const main = document.getElementById("app");
+	if (main) {
+		main.innerHTML = "<p style='color:red;'> Failed to load portfolio data.</p>";
+	}	
+
+	});
